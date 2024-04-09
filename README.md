@@ -8,10 +8,10 @@
   pip install numpy
 ```
 - Baixe o código-fonte deste projeto.
-- Execute o arquivo Python main.py.
-- Pressione as teclas A e D para controlar a velocidade de rotação.
-- Pressione as teclas W e S para controlar o zoom.
-- Pressione a tecla Q para sair do programa.
+- Execute o arquivo Python DemonstraCubo.py.
+- Ultilize as Teclas **"W", "A", "S", "D"** para movimentar o cubo na Tela.
+- Ultilize as Teclas **"Q", "E"** para alterar a velocidade de rotação do Cubo.
+- Ultilize o Scroll do mouse para aproximar ou distanciar o Cubo.
 
 ## Utilização
 - Movimentação: Use as teclas W, A, S, D para mover o cubo na tela.
