@@ -25,6 +25,7 @@ velocideRotacao = 0.01
 d = 50
 moverX = moverY = 0
 angulo_x = angulo_y = angulo_z = 0
+z_translation = 2  # Initial z-translation value
 while True:
     clock.tick(60)
     window.fill((0,0,0))
@@ -57,7 +58,7 @@ while True:
     # Matriz de translação
     translacao = [[1, 0, 0, 0],
                   [0, 1, 0, 0],
-                  [0, 0, 1, 2],
+                  [0, 0, 1, z_translation],
                   [0, 0, 0, 1]]
 
     angulo_x += velocideRotacao; angulo_y += velocideRotacao; angulo_z += velocideRotacao
@@ -100,6 +101,7 @@ while True:
                         d -= 25
     # Movimentação do cubo usando W, A, S, D
     # Controle de rotação usando Q e E
+    # Controle de proximidade usando R e F
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         moverY -= 10
@@ -113,5 +115,14 @@ while True:
         velocideRotacao -= 0.01
     if keys[pygame.K_q]:
         velocideRotacao += 0.01
+    if keys[pygame.K_r]:
+        z_translation += 0.1  # Move para longe
+    if keys[pygame.K_f]:
+        if z_translation >= 0.9:
+            z_translation -= 0.1  # Mover para perto
+        
           
+
+
+    print(z_translation)
     pygame.display.update()
